@@ -18,10 +18,12 @@ const TransitionExample = () => {
   return (
     <div className="h-full">
       <input value={input} onChange={handleChange} placeholder="검색어 입력" />
-      {isPending && <p>로딩 중...</p>}
-      {list.map((item, index) => (
-        <div key={index}>{item}</div>
-      ))}
+      <div className="h-[300px] overflow-y-auto">
+        {isPending && <p>로딩 중...</p>}
+        {list.map((item, index) => (
+          <div key={index}>{item}</div>
+        ))}
+      </div>
     </div>
   );
 };
