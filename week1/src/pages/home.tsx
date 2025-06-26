@@ -2,6 +2,7 @@ import AdvancedSearch from "./AdvancedSearch";
 import DeferredValueexample from "./DeferredValueExample";
 import PaginationExample from "./PaginationExample";
 import TransitionExample from "./TransitionExample";
+import TransitionWithSuspense from "./TransitionWithSuspense";
 
 const Home = () => {
   return (
@@ -11,10 +12,14 @@ const Home = () => {
         <TransitionExample />
         {/* useDeferredValue */}
         <DeferredValueexample />
-        {/* 고급 사용 */}
+        {/* 검색 자동완성 + 딜레이된 대량 필터링 */}
         <AdvancedSearch />
       </div>
+      {/* Pagination + Transition API */}
       <PaginationExample />
+      <div className="p-4">
+        <TransitionWithSuspense />
+      </div>
     </div>
   );
 };
