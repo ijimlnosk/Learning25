@@ -17,8 +17,9 @@ const TransitionExample = () => {
 
   return (
     <div className="h-full">
+      <p>useTransition Example</p>
       <input value={input} onChange={handleChange} placeholder="검색어 입력" />
-      <div className="h-[300px] overflow-y-auto">
+      <div className="h-[300px] w-[200px] overflow-y-auto border flex justify-center">
         {isPending && <p>로딩 중...</p>}
         {list.map((item, index) => (
           <div key={index}>{item}</div>

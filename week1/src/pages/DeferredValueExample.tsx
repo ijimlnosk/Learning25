@@ -9,8 +9,9 @@ const DeferredValueexample = () => {
 
   return (
     <div className="h-full">
+      <p>useDeferredValue Example</p>
       <input value={input} onChange={(e) => setInput(e.target.value)} />
-      <div className="h-[300px] overflow-y-auto">
+      <div className="h-[300px] w-[200px] overflow-y-auto border flex justify-center items-center flex-col">
         {input !== deferredInput && <p>렌더링 중...</p>}
         {filtered.map((item, index) => (
           <div key={index}>{item}</div>
